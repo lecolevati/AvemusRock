@@ -11,6 +11,11 @@ body{
 color:#fff;
 }
 
+.table {
+	width: 70%;
+	margin-bottom: 20px
+}
+
 h4, h5, h6,
 h1, h2, h3 {margin-top: 0;}
 ul, ol {margin: 0;}
@@ -35,6 +40,7 @@ body a{
 	text-align: center;
 	padding: 8em 0 0;
 	min-height: 100%;
+	background:url(../images/bg.png);
 }
 
 .avemus{

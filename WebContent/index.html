@@ -1,18 +1,12 @@
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8" name="viewport"
+	content="width=device-width, initial-scale=1">
 <title>Avemus Rock</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="js/jquery.min.js"></script>
-<script>
-	$(document).ready(function() {
-		$('#myTable').dataTable();
-	});
-</script>
 <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <link href="css/jquery.dataTables.min.css" rel="stylesheet" />
-
 <script type="text/javascript" src="js/jquery.smint.js"></script>
 <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -22,13 +16,55 @@
 			'scrollSpeed' : 1000
 		});
 	});
+
+	$(document).ready(function() {
+		$('#repertorio').dataTable();
+	});
 </script>
+
+<script type="text/javascript">
+	$('li > a').click(function() {
+		$('li').removeClass();
+		$(this).parent().addClass('active');
+	});
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+	!function(f, b, e, v, n, t, s) {
+		if (f.fbq)
+			return;
+		n = f.fbq = function() {
+			n.callMethod ? n.callMethod.apply(n, arguments) : n.queue
+					.push(arguments)
+		};
+		if (!f._fbq)
+			f._fbq = n;
+		n.push = n;
+		n.loaded = !0;
+		n.version = '2.0';
+		n.queue = [];
+		t = b.createElement(e);
+		t.async = !0;
+		t.src = v;
+		s = b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t, s)
+	}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '807835726024320');
+	fbq('track', 'PageView');
+</script>
+<noscript>
+	<img height="1" width="1" style="display: none"
+		src="https://www.facebook.com/tr?id=807835726024320&ev=PageView&noscript=1" />
+</noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
 </head>
 <body>
 
-	<nav class="subMenu navbar-custom navbar-scroll-top smint"
-		role="navigation">
-		<div class="container">
+	<nav class="subMenu navbar-custom smint" role="navigation" id="menu">
+		<div class="container" id="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -37,177 +73,153 @@
 			</div>
 			<div
 				class="navbar-collapse navbar-left navbar-main-collapse collapse"
-				style="height: 1px;">
+				style="height: 1px;" id="navbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a id="s1" href="#">Home</a></li>
-					<li><a id="s1" href="#">Galeria</a></li>
-					<li><a id="s2" href="#">Agenda</a></li>
-					<li><a id="s3" href="#">A Banda</a></li>
-					<li><a id="s4" href="#">Repertório</a></li>
+					<li><a id="menu1" href="#">Home</a></li>
+					<li><a id="menu2" href="#">Galeria</a></li>
+					<li><a id="menu3" href="#">Agenda</a></li>
+					<li><a id="menu4" href="#">A Banda</a></li>
+					<li><a id="menu5" href="#">Repertório</a></li>
 				</ul>
 			</div>
-
 			<div class="clearfix"></div>
 		</div>
 	</nav>
 
-	<div class="logo">
-
+	<div class="logo menu1">
 		<a href="index.html"><img src="images/avemus4.png" alt="" /></a>
-
 		<div class="slider-left">
 			<span class="avemus">Avemus Rock</span>
-			<p class="top_desc">#avemusrocknaveia</p>
-			<div class="social">
+			<p class="avemus_na_veia">#avemusrocknaveia</p>
+			<div class="midia_social">
 				<ul>
-					<li class="facebook"><a href="#"><span> </span></a></li>
-					<li class="twitter"><a href="#"><span> </span></a></li>
-					<li class="rss"><a href="#"><span> </span></a></li>
-					<li class="google"><a href="#"><span> </span></a></li>
+					<li class="facebook"><a
+						href="https://www.facebook.com/bandaavemusrock/" target="_blank"><span>
+						</span></a></li>
+					<li class="twitter"><a href="https://twitter.com/avemusrock"
+						target="_blank"><span> </span></a></li>
+					<li class="youtube"><a
+						href="https://www.youtube.com/user/avemusrock" target="_blank"><span>
+						</span></a></li>
+					<li class="gmail"><a href="mailto:avemusrock@gmail.com"
+						target="_blank"><span> </span></a></li>
 				</ul>
 			</div>
 		</div>
-
-
 	</div>
 
-	<div class="portfolio s1" id="portfolio">
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p1.jpg" class="img-responsive" alt="xxxxxx" />
+	<div class="portfolio menu2" id="portfolio">
+		<div class="coluna coluna_span">
+			<img src="images/p1.jpg" class="img-responsive" />
 		</div>
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p2.jpg" class="img-responsive" alt="ffffff" />
+		<div class="coluna coluna_span">
+			<img src="images/p2.jpg" class="img-responsive" />
 		</div>
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p9.jpg" class="img-responsive" alt="hhhhhhh" />
+		<div class="coluna coluna_span">
+			<img src="images/p9.jpg" class="img-responsive" />
 		</div>
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p3.jpg" class="img-responsive" alt="" />
+		<div class="coluna coluna_span">
+			<img src="images/p3.jpg" class="img-responsive" />
 		</div>
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p12.jpg" class="img-responsive" alt="" />
+		<div class="coluna coluna_span">
+			<img src="images/p12.jpg" class="img-responsive" />
 		</div>
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p8.jpg" class="img-responsive" alt="" />
+		<div class="coluna coluna_span">
+			<img src="images/p8.jpg" class="img-responsive" />
 		</div>
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p6.jpg" class="img-responsive" alt="" />
+		<div class="coluna coluna_span">
+			<img src="images/p6.jpg" class="img-responsive" />
 		</div>
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p10.jpg" class="img-responsive" alt="" />
+		<div class="coluna coluna_span">
+			<img src="images/p10.jpg" class="img-responsive" />
 		</div>
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p4.jpg" class="img-responsive" alt="" />
+		<div class="coluna coluna_span">
+			<img src="images/p4.jpg" class="img-responsive" />
 		</div>
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p7.jpg" class="img-responsive" alt="" />
+		<div class="coluna coluna_span">
+			<img src="images/p7.jpg" class="img-responsive" />
 		</div>
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p11.jpg" class="img-responsive" alt="" />
+		<div class="coluna coluna_span">
+			<img src="images/p11.jpg" class="img-responsive" />
 		</div>
-		<div class="col_1_of_4 span_1_of_4">
-			<img src="images/p5.jpg" class="img-responsive" alt="" />
+		<div class="coluna coluna_span">
+			<img src="images/p5.jpg" class="img-responsive" />
 		</div>
 		<div class="clearfix"></div>
 	</div>
 
-	<div class="services s2" id="services">
+	<div class="div_agenda menu3" id="div_agenda">
 		<div class="container">
 			<h3 class="m_4">Agenda</h3>
 			<div class="slider_container sTop">
-				<div class="wmuSlider example1">
+				<div class="wmuSlider agenda1">
 					<div class="wmuSliderWrapper">
 						<article>
 							<div class="agenda">
 								<ul width="600px;" style="padding-right: 35px;">
-									<li class="teste"
-										style="height: 270px; width: 275px; padding-top: 20px;">
-										<span
-										style="font-size: 115px; display: inline; font-family: 'Open Sans', sans-serif; font-weight: 800;">11</span>
-										<span
-										style="display: inline; font-size: 25px; font-family: 'Open Sans', sans-serif; font-weight: 400; font-style: italic;">NOV</span>
-										<span
-										style="font-size: 18px; font-family: 'Open Sans', sans-serif; font-weight: 800;">CENTRAL</span>
-									</li>
-									<li class="teste"
-										style="height: 270px; width: 275px; padding-top: 20px;">
-										<span
-										style="font-size: 115px; display: inline; font-family: 'Open Sans', sans-serif; font-weight: 800;">12</span>
-										<span
-										style="display: inline; font-size: 25px; font-family: 'Open Sans', sans-serif; font-weight: 400; font-style: italic;">NOV</span>
-										<span
-										style="font-size: 18px; font-family: 'Open Sans', sans-serif; font-weight: 800;">CENTRAL</span>
-									</li>
-									<li class="teste"
-										style="height: 270px; width: 275px; padding-top: 20px;">
-										<span
-										style="font-size: 115px; display: inline; font-family: 'Open Sans', sans-serif; font-weight: 800;">13</span>
-										<span
-										style="display: inline; font-size: 25px; font-family: 'Open Sans', sans-serif; font-weight: 400; font-style: italic;">NOV</span>
-										<span
-										style="font-size: 18px; font-family: 'Open Sans', sans-serif; font-weight: 800;">CENTRAL</span>
-									</li>
+									<a href="https://www.facebook.com/events/920132741454695/" target="_blank">
+										<li class="data">
+											<span class="dia" style="display: inline;">28</span> 
+											<span class="mes" style="display: inline;">JAN</span> 
+											<br> 
+											<span class="local" style="display: inline;">London Station</span>
+										</li>
+									</a>
+									<a href="https://www.facebook.com/events/179469492529979/" target="_blank">
+										<li class="data">
+											<span class="dia" style="display: inline;">11</span> 
+											<span class="mes" style="display: inline;">FEV</span> 
+											<br> 
+											<span class="local" style="display: inline;">Ekletiku's Bar</span>
+										</li>
+									</a>
+									<a href="https://www.facebook.com/events/1698715217085534/" target="_blank">
+										<li class="data">
+											<span class="dia" style="display: inline;">18</span> 
+											<span class="mes" style="display: inline;">FEV</span> 
+											<br> 
+											<span class="local" style="display: inline;">London Station</span>
+										</li>
+									</a>
 								</ul>
 							</div>
 						</article>
 						<article>
 							<div class="agenda">
 								<ul width="600px;" style="padding-right: 35px;">
-									<li class="teste"
-										style="height: 270px; width: 275px; padding-top: 20px;">
-										<span
-										style="font-size: 115px; display: inline; font-family: 'Open Sans', sans-serif; font-weight: 800;">14</span>
-										<span
-										style="display: inline; font-size: 25px; font-family: 'Open Sans', sans-serif; font-weight: 400; font-style: italic;">NOV</span>
-										<span
-										style="font-size: 18px; font-family: 'Open Sans', sans-serif; font-weight: 800;">CENTRAL</span>
-									</li>
-									<li class="teste"
-										style="height: 270px; width: 275px; padding-top: 20px;">
-										<span
-										style="font-size: 115px; display: inline; font-family: 'Open Sans', sans-serif; font-weight: 800;">15</span>
-										<span
-										style="display: inline; font-size: 25px; font-family: 'Open Sans', sans-serif; font-weight: 400; font-style: italic;">NOV</span>
-										<span
-										style="font-size: 18px; font-family: 'Open Sans', sans-serif; font-weight: 800;">CENTRAL</span>
-									</li>
-									<li class="teste"
-										style="height: 270px; width: 275px; padding-top: 20px;">
-										<span
-										style="font-size: 115px; display: inline; font-family: 'Open Sans', sans-serif; font-weight: 800;">16</span>
-										<span
-										style="display: inline; font-size: 25px; font-family: 'Open Sans', sans-serif; font-weight: 400; font-style: italic;">NOV</span>
-										<span
-										style="font-size: 18px; font-family: 'Open Sans', sans-serif; font-weight: 800;">CENTRAL</span>
-									</li>
+									<a href="https://www.facebook.com/events/1320002294725878/" target="_blank">
+										<li class="data">
+											<span class="dia" style="display: inline;">11</span> 
+											<span class="mes" style="display: inline;">MAR</span> 
+											<br> 
+											<span class="local" style="display: inline;">London Station</span>
+										</li>
+									</a>
 								</ul>
 							</div>
 						</article>
 					</div>
-
 				</div>
 				<script src="js/jquery.wmuSlider.js"></script>
 				<script>
-					$('.example1').wmuSlider();
+					$('.agenda1').wmuSlider();
 				</script>
 			</div>
 		</div>
 	</div>
 
-	<div class="about s3" id="about">
+	<div class="banda menu4" id="banda">
 		<div class="container">
 			<h3 class="m_4">A Banda</h3>
-			<p style="text-align: justify; font-size: 16px; line-height: 35px;">
-				&emsp;&emsp;&emsp;&emsp;A palavra <b>“Avemus”</b> é uma referência
-				(trocadilho) ao termo <b>“Habemus”</b>, que vem do latim, e
-				significa <b>“Temos”</b>. A junção das palavras <b>“Avemus” +
-					“Rock”</b> define o grupo de música <b>“Avemus Rock”</b>.
+			<p class="historia">
+				A palavra <b>“Avemus”</b> é uma referência (trocadilho) ao termo <b>“Habemus”</b>,
+				que vem do latim, e significa <b>“Temos”</b>. A junção das palavras
+				<b>“Avemus” + “Rock”</b> define o grupo de música <b>“Avemus
+					Rock”</b>.
 			</p>
-			<p style="text-align: justify; font-size: 16px; line-height: 35px;">
-				&emsp;&emsp;&emsp;&emsp;A banda teve início em 2005 e passou por
+			<p class="historia">A banda teve início em 2005 e passou por
 				vários ajustes ao longo do tempo.</p>
-			<p style="text-align: justify; font-size: 16px; line-height: 35px;">
-				&emsp;&emsp;&emsp;&emsp;Em 2011 a estrutura da banda foi revista,
+			<p class="historia">Em 2011 a estrutura da banda foi revista,
 				onde o Bruno Cunha, que era o baterista, assumiu a guitarra e
 				violão.A chegada do novo baterista, Sergio Higa em 2013, nos deu a
 				oportunidade de rever, não só a estrutura de músicos, como também a
@@ -215,190 +227,201 @@
 				Leandro Colevati chegou para referenciar e dar uma característica
 				mais peculiar do rock. Em 2016 chega Wilson Paeze para complementar
 				com seus teclados e backings.</p>
-			<p style="text-align: justify; font-size: 16px; line-height: 35px;">
-				&emsp;&emsp;&emsp;&emsp;Embora o foco estivesse sempre direcionado
-				ao Pop Nacional, o repertório basicamente era formado por canções do
+			<p class="historia">Embora o foco estivesse sempre direcionado ao
+				Pop Nacional, o repertório basicamente era formado por canções do
 				final da década de 80 em diante e refletia uma mistura que ia desde
 				o MPB até Rocks mais “pesados”, do Golpe de Estado.</p>
-			<p
-				style="padding-bottom: 40px; text-align: justify; font-size: 16px; line-height: 35px;">
-				&emsp;&emsp;&emsp;&emsp; Com uma “pegada” mais Rock ´n Roll, a banda
-				pode vislumbrar outros segmentos e momentos da música, e a partir de
-				2015, a banda iniciou a reformulação do repertorio incluindo canções
-				internacionais, para assim, abrir um leque maior, e percorrer um
-				novo repertorio entre o Classic Rock e o tributo ao Rock Nacional.</p>
+			<p class="historia" style="padding-bottom: 40px;">Com uma
+				“pegada” mais Rock ´n Roll, a banda pode vislumbrar outros segmentos
+				e momentos da música, e a partir de 2015, a banda iniciou a
+				reformulação do repertorio incluindo canções internacionais, para
+				assim, abrir um leque maior, e percorrer um novo repertorio entre o
+				Classic Rock e o tributo ao Rock Nacional.</p>
+
 			<div class="row text-center">
-				<div class="col-md-3 about-grid text-center">
+				<div class="col-md-3 banda-grid text-center">
 					<img src="images/pic1.png" class="img-responsive" alt="" />
 					<h3>
-						<a href="#">Paulo Cunha<br>Vocais
+						<a>Paulo Cunha<br>Vocais
 						</a>
 					</h3>
 				</div>
-				<div class="col-md-3 about-grid text-center">
+				<div class="col-md-3 banda-grid text-center">
 					<img src="images/pic4.png" class="img-responsive" alt="" />
 					<h3>
-						<a href="#">Wilson Paeze<br>Teclado
+						<a>Wilson Paeze<br>Teclado
 						</a>
 					</h3>
 				</div>
-				<div class="col-md-3 about-grid text-center">
+				<div class="col-md-3 banda-grid text-center">
 					<img src="images/pic7.png" class="img-responsive" alt="" />
 					<h3>
-						<a href="#">Sergio Higa<br>Bateria
+						<a>Sergio Higa<br>Bateria
 						</a>
 					</h3>
 				</div>
-				<div class="col-md-3 about-grid text-center">
+				<div class="col-md-3 banda-grid text-center">
 					<img src="images/pic2.png" class="img-responsive" alt="" />
 					<h3>
-						<a href="#">Bruno Cunha<br>Guitarra
+						<a>Bruno Cunha<br>Guitarra
 						</a>
 					</h3>
 				</div>
 
-				<div class="col-md-3 about-grid text-center"
+				<div class="col-md-3 banda-grid text-center"
 					style="margin-top: 20px;">
 					<img src="images/pic3.png" class="img-responsive" alt="" />
 					<h3>
-						<a href="#">Leandro Colevati<br>Baixo
+						<a>Leandro Colevati<br>Baixo
 						</a>
 					</h3>
 				</div>
-				<div class="col-md-3 about-grid text-center"
+				<div class="col-md-3 banda-grid text-center"
 					style="margin-top: 20px;">
 					<img src="images/pic5.png" class="img-responsive" alt="" />
 					<h3>
-						<a href="#">Victor Cunha<br>Fotógrafo
+						<a>Victor Cunha<br>Fotógrafo
 						</a>
 					</h3>
 				</div>
-				<div class="col-md-3 about-grid text-center"
+				<div class="col-md-3 banda-grid text-center"
 					style="margin-top: 20px;">
 					<img src="images/pic6.png" class="img-responsive" alt="" />
 					<h3>
-						<a href="#">Carolina Chamas<br>Assessora
+						<a>Carolina Chamas<br>Assessora
 						</a>
 					</h3>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="about s4" id="about" style="padding: 3em; background-color:#fff;">
+	<div class="banda menu5" id="banda"
+		style="padding: 3em; background-color: #fff;">
 		<div class="container">
-			<h3 class="m_4" style="color:#35353f;">Repertório</h3>
-			<!-- 
-   			<p class="m_5">jquery table responsive jquery table responsive jquery table responsive jquery table responsive jquery table responsive</p>
-   			<div class="row text-center">
-					 texto texto texto texto texto texto texto texto texto
-   			</div>
-   			-->
-   			<!-- Colocar a table gerada aqui -->
-   			<center>
-			<div class="table">
-				<table id="myTable" class="table table-striped"  style="color: #000;">
-					<thead>
-						<tr>
-							<th>BANDA</th>
-							<th>MÚSICA</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>AC/DC</td>
-							<td>Highway to Hell</td>
-						</tr>
-						<tr>
-							<td>Aerosmith</td>
-							<td>I Don't Wnna Miss a Thing</td>
-						</tr>
-						<tr>
-							<td>Asia</td>
-							<td>Only time will tell</td>
-						</tr>
-						<tr>
-							<td>Asia</td>
-							<td>Heat of the Moment</td>
-						</tr>
-						<tr>
-							<td>Chickenfoot</td>
-							<td>Something Going Wrong</td>
-						</tr>
-						<tr>
-							<td>Deep Purple</td>
-							<td>Sometimes I Feel Like Screaming</td>
-						</tr>
-						<tr>
-							<td>Dio</td>
-							<td>Rainbow in the dark</td>
-						</tr>
-						<tr>
-							<td>Europe</td>
-							<td>The Final Countdown Live</td>
-						</tr>
-						<tr>
-							<td>Extreme</td>
-							<td>Rest in Peace</td>
-						</tr>
-						<tr>
-							<td>Gotthard</td>
-							<td>Anytime Anywhere</td>
-						</tr>
-						<tr>
-							<td>Jorn Land</td>
-							<td>We brougth the angels down</td>
-						</tr>
-						<tr>
-							<td>Journey</td>
-							<td>Don't Stop Believin</td>
-						</tr>
-						<tr>
-							<td>Journey</td>
-							<td>Separate Ways</td>
-						</tr>
-						<tr>
-							<td>Kansas</td>
-							<td>Play The Game Tonight</td>
-						</tr>
-						<tr>
-							<td>Metallica</td>
-							<td>Enter Sandman</td>
-						</tr>
-						<tr>
-							<td>Muse</td>
-							<td>Supremacy</td>
-						</tr>
-						<tr>
-							<td>Ozzy</td>
-							<td>No More Tears</td>
-						</tr>
-						<tr>
-							<td>Peter Frampton</td>
-							<td>Breaking all the rules</td>
-						</tr>
-						<tr>
-							<td>Pink Floyd</td>
-							<td>The Happiest Days of Our Lives + The Wall pt 2</td>
-						</tr>
-						<tr>
-							<td>Scorpions</td>
-							<td>Big city nights</td>
-						</tr>
-						<tr>
-							<td>The Winery Dogs</td>
-							<td>I'm No Angel</td>
-						</tr>
-						<tr>
-							<td>Van Halen</td>
-							<td>Cant Stop loving you</td>
-						</tr>
-						<tr>
-							<td>Whitesnake</td>
-							<td>Fool For You Loving</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+			<h3 class="m_4" style="color: #35353f;">Repertório</h3>
+			<!-- Colocar a table gerada aqui -->
+			<center>
+				<div class="table">
+					<table id="repertorio" class="table table-striped"
+						style="color: #000;">
+						<thead>
+							<tr>
+								<th>BANDA</th>
+								<th>MÚSICA</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>AC/DC</td>
+								<td>Highway to Hell</td>
+							</tr>
+							<tr>
+								<td>Aerosmith</td>
+								<td>I Don't Wanna Miss a Thing</td>
+							</tr>
+							<tr>
+								<td>Asia</td>
+								<td>Only time will tell</td>
+							</tr>
+							<tr>
+								<td>Asia</td>
+								<td>Heat of the Moment</td>
+							</tr>
+							<tr>
+								<td>Chickenfoot</td>
+								<td>Something Going Wrong</td>
+							</tr>
+							<tr>
+								<td>Deep Purple</td>
+								<td>Sometimes I Feel Like Screaming</td>
+							</tr>
+							<tr>
+								<td>Dio</td>
+								<td>Rainbow in the dark</td>
+							</tr>
+							<tr>
+								<td>Europe</td>
+								<td>The Final Countdown Live</td>
+							</tr>
+							<tr>
+								<td>Extreme</td>
+								<td>Rest in Peace</td>
+							</tr>
+							<tr>
+								<td>Phenomena II</td>
+								<td>Did it All for Love</td>
+							</tr>
+							<tr>
+								<td>Gotthard</td>
+								<td>Anytime Anywhere</td>
+							</tr>
+							<tr>
+								<td>Jorn Land</td>
+								<td>We Brougth the Angels Down</td>
+							</tr>
+							<tr>
+								<td>Journey</td>
+								<td>Don't Stop Believin</td>
+							</tr>
+							<tr>
+								<td>Journey</td>
+								<td>Separate Ways</td>
+							</tr>
+							<tr>
+								<td>Kansas</td>
+								<td>Play The Game Tonight</td>
+							</tr>
+							<tr>
+								<td>Metallica</td>
+								<td>Enter Sandman</td>
+							</tr>
+							<tr>
+								<td>Muse</td>
+								<td>Supremacy</td>
+							</tr>
+							<tr>
+								<td>Ozzy</td>
+								<td>No More Tears</td>
+							</tr>
+							<tr>
+								<td>Peter Frampton</td>
+								<td>Breaking All the Rules</td>
+							</tr>
+							<tr>
+								<td>Scorpions</td>
+								<td>Big City Nights</td>
+							</tr>
+							<tr>
+								<td>Skid Row</td>
+								<td>18 and Life</td>
+							</tr>
+							<tr>
+								<td>Steve Vai</td>
+								<td>For the Love of God</td>
+							</tr>
+							<tr>
+								<td>The Winery Dogs</td>
+								<td>I'm No Angel</td>
+							</tr>
+							<tr>
+								<td>Van Halen</td>
+								<td>Can't Stop Loving You</td>
+							</tr>
+							<tr>
+								<td>Van Halen</td>
+								<td>Jump</td>
+							</tr>
+							<tr>
+								<td>Whitesnake</td>
+								<td>Fool For You Loving</td>
+							</tr>
+							<tr>
+								<td>Whitesnake</td>
+								<td>Love Ain't No Stranger</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</center>
 			<!-- Colocar a table gerada até aqui -->
 		</div>
@@ -412,96 +435,6 @@
 			<div class="clearfix"></div>
 		</div>
 	</div>
-	<!-- 
-   	<div class="table">
-<table id="myTable" class="table table-striped" align="center" style="color:#000;">  
-        <thead>  
-          <tr>  
-            <th>ENO</th>  
-            <th>EMPName</th>  
-            <th>Country</th>  
-            <th>Salary</th>  
-          </tr>  
-        </thead>  
-        <tbody>  
-          <tr>  
-            <td>001</td>  
-            <td>Anusha</td>  
-            <td>India</td>  
-            <td>10000</td>  
-          </tr>  
-          <tr>  
-            <td>002</td>  
-            <td>Charles</td>  
-            <td>United Kingdom</td>  
-            <td>28000</td>  
-          </tr>  
-          <tr>  
-            <td>003</td>  
-            <td>Sravani</td>  
-            <td>Australia</td>  
-            <td>7000</td>  
-          </tr>  
-		   <tr>  
-            <td>004</td>  
-            <td>Amar</td>  
-            <td>India</td>  
-            <td>18000</td>  
-          </tr>  
-          <tr>  
-            <td>005</td>  
-            <td>Lakshmi</td>  
-            <td>India</td>  
-            <td>12000</td>  
-          </tr>  
-          <tr>  
-            <td>006</td>  
-            <td>James</td>  
-            <td>Canada</td>  
-            <td>50000</td>  
-          </tr>  
-		  
-		   <tr>  
-            <td>007</td>  
-            <td>Ronald</td>  
-            <td>US</td>  
-            <td>75000</td>  
-          </tr>  
-          <tr>  
-            <td>008</td>  
-            <td>Mike</td>  
-            <td>Belgium</td>  
-            <td>100000</td>  
-          </tr>  
-          <tr>  
-            <td>009</td>  
-            <td>Andrew</td>  
-            <td>Argentina</td>  
-            <td>45000</td>  
-          </tr>  
-		  
-		    <tr>  
-            <td>010</td>  
-            <td>Stephen</td>  
-            <td>Austria</td>  
-            <td>30000</td>  
-          </tr>  
-          <tr>  
-            <td>011</td>  
-            <td>Sara</td>  
-            <td>China</td>  
-            <td>750000</td>  
-          </tr>  
-          <tr>  
-            <td>012</td>  
-            <td>JonRoot</td>  
-            <td>Argentina</td>  
-            <td>65000</td>  
-          </tr>  
-        </tbody>  
-      </table>  
-</div>
-   	-->
 </body>
 </html>
 
